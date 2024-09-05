@@ -54,7 +54,9 @@
         <label for="confirm_password">Verificar Contraseña:</label>
         <input type="password" id="confirm_password" name="confirm_password" required><br>
 
-        <input type="button" value="Guardar" onclick="alert('No se pudo conectar al backend en este momento');">
+        <input type="button" value="Guardar" onclick="alert('No se pudo conectar al backend en este momento');"><br>
+
+        <input type="button" value="Cancelar" onclick="window.location.href='index.php';">
     </form>
 
 </body>
