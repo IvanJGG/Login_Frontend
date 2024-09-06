@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ingreso de Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <h1>Este es un texto extra para develop</h1>
-    <h1>Registro de Usuario</h1>
-    <form action="http://localhost:5000/api/register" method="POST">
+    <h1>Ingreso de Usuario</h1>
+    <form>
         <label for="username">Usuario:</label>
         <input type="text" id="username" name="username" required><br>
-
 
         <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password" required><br>
 
-        <input type="submit" value="Registrar">
+        <input type="button" value="Ingresar" id="guardarButton">
+        <input type="button" value="Registrar" onclick="window.location.href='registrar.php';">
     </form>    
+
 </body>
 </html>
