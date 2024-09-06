@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuario</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 
 </head>
 <body>
@@ -23,7 +24,8 @@
         <label for="confirm_password">Verificar Contraseña:</label>
         <input type="password" id="confirm_password" name="confirm_password" required><br>
 
-        <input type="button" value="Guardar" onclick="alert('No se pudo conectar al backend en este momento');">
+        <input type="button" value="Guardar" id="guardarButton">
+
     </form>
 
 </body>
