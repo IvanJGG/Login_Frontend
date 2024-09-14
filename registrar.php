@@ -11,20 +11,20 @@
 <body>
 
     <h1>Registro de Usuario</h1>
-    <form action="procesar.php" method="POST">
+    <form>
         <label for="fullname">Nombre Completo:</label>
         <input type="text" id="fullname" name="fullname" required><br>
 
-        <label for="username_login">Nombre de Usuario:</label>
-        <input type="text" id="username" name="username_login" required><br>
+        <label for="usernameRegister">Nombre de Usuario:</label>
+        <input type="text" id="usernameRegister" name="usernameRegister" required><br>
 
-        <label for="password_login">Contraseña:</label>
-        <input type="password" id="password" name="password_login" required><br>
+        <label for="passwordRegister">Contraseña:</label>
+        <input type="password" id="passwordRegister" name="passwordRegister" required><br>
 
-        <label for="confirm_password">Verificar Contraseña:</label>
-        <input type="password" id="confirm_password" name="confirm_password" required><br>
+        <label for="confirmPassword">Verificar Contraseña:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required><br>
 
-        <input type="button" value="Guardar" id="guardarButton">
+        <input type="button" value="Guardar" id="guardarButtonRegister">
 
     </form>
 
