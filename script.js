@@ -14,30 +14,20 @@ document.getElementById('guardarButton')?.addEventListener('click', function() {
         },
         body: JSON.stringify(data)
     })
-    .then(response => {
+    .then(async response => {
         if (!response.ok) {
-            throw new Error('Error en la red');
-        }
-        return response.json();
-    })
-    .then(response => {
-        if (response.status === 200) {
-            return fetch('guardarSesion.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: JSON.stringify({
-                    username: username
-                })
-            });
-        } else {
             throw new Error('Credenciales incorrectas');
         }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+       
+
+        let body = await response.json();
+        return fetch('guardarSesion.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams(body)
+        });
     })
     .then(response => {
         if (!response.ok) {

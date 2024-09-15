@@ -21,18 +21,8 @@ if (isset($_SESSION['username'])) {
 </head>
 <body>
     <h1>Bienvenido <?php echo htmlspecialchars($username); ?></h1>
-    <form action="bienvenido.php" method="post">
+    <form action="cerrarsesion.php" method="post">
         <input type="submit" value="Cerrar Sesión" name="logout">
     </form>
-
-    <?php
-    
-    if (isset($_POST['logout'])) {
-        session_unset();  
-        session_destroy(); 
-        header('Location: index.php');
-        exit();
-    }
-    ?>
 </body>
 </html>
