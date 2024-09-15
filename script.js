@@ -20,20 +20,24 @@ document.getElementById('guardarButton')?.addEventListener('click', function() {
         }
         return response.json();
     })
-    .then(data => {
-        if (data.Message === "Inicio de sesión exitoso") {
+    .then(response => {
+        if (response.status === 200) {
             return fetch('guardarSesion.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: new URLSearchParams({
+                body: JSON.stringify({
                     username: username
                 })
             });
         } else {
             throw new Error('Credenciales incorrectas');
         }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
     })
     .then(response => {
         if (!response.ok) {
