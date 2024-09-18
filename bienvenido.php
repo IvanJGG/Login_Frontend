@@ -20,7 +20,8 @@ if (isset($_SESSION['username'])) {
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Bienvenido <?php echo htmlspecialchars($username); ?></h1>
+    <h1>Bienvenido <?php echo htmlspecialchars($fullname); ?></h1>
+    <h2>tu usuario con el que ingresaste es: <?php echo htmlspecialchars($username); ?></h2>
     <form action="cerrarsesion.php" method="post">
         <input type="submit" value="Cerrar Sesión" name="logout">
     </form>

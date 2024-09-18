@@ -12,8 +12,8 @@
 
     <h1>Registro de Usuario</h1>
     <form>
-        <label for="fullname">Nombre Completo:</label>
-        <input type="text" id="fullname" name="fullname" required><br>
+        <label for="fullnameRegister">Nombre Completo:</label>
+        <input type="text" id="fullnameRegister" name="fullnameRegister" required><br>
 
         <label for="usernameRegister">Nombre de Usuario:</label>
         <input type="text" id="usernameRegister" name="usernameRegister" required><br>

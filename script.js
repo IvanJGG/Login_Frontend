@@ -41,6 +41,7 @@ document.getElementById('guardarButton')?.addEventListener('click', function() {
 });
 
 document.getElementById('guardarButtonRegister')?.addEventListener('click', function() {
+    const fullnameRegister = document.getElementById('fullnameRegister').value;
     const usernameRegister = document.getElementById('usernameRegister').value;
     const passwordRegister = document.getElementById('passwordRegister').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
@@ -51,6 +52,7 @@ document.getElementById('guardarButtonRegister')?.addEventListener('click', func
     }
 
     const data = {
+        fullnameRegister: fullnameRegister,
         usernameRegister: usernameRegister,
         passwordRegister: passwordRegister
     };
@@ -74,4 +76,5 @@ document.getElementById('guardarButtonRegister')?.addEventListener('click', func
     .catch(error => {
         alert('No se pudo conectar al backend en este momento. Error: ' + error.message);
     });
+    //cambiar todos los .then por async y await, usar try catch, mejorar los mensajes para saber que está pasando exactamente, buscar como poner los mensajes para programador de consola
 });
