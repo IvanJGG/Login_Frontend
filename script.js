@@ -22,7 +22,7 @@ document.getElementById('guardarButton')?.addEventListener('click', async functi
         }
 
         const body = await response.json();
-        //console.log('Respuesta del backend recibida:', body); 
+        
 
        
         const phpResponse = await fetch('guardarSesion.php', {
@@ -38,7 +38,7 @@ document.getElementById('guardarButton')?.addEventListener('click', async functi
             throw new Error('Error al iniciar sesión');
         }
 
-        //console.log('Sesión en PHP guardada con éxito'); 
+       
         window.location.href = 'bienvenido.php';
 
     } catch (error) {
@@ -65,7 +65,7 @@ document.getElementById('guardarButtonRegister')?.addEventListener('click', asyn
             passwordRegister: passwordRegister
         };
 
-        //console.log('Enviando datos de registro:', data); 
+       
 
         const response = await fetch('http://localhost:5208/users/register', {
             method: 'POST',
@@ -76,18 +76,17 @@ document.getElementById('guardarButtonRegister')?.addEventListener('click', asyn
         });
 
         if (!response.ok) {
-            console.error('Error en la red al registrar:', response); 
+            console.error('Error al registrar:', response); 
             throw new Error('Error al registrarse');
         }
 
         const result = await response.json();
-        //console.log('Respuesta de registro recibida:', result); 
+        
         alert('Registro exitoso');
 
     } catch (error) {
         console.error('Error durante el registro:', error.message); 
-        alert('No se puedo conectar en este momento');
+        alert('No se pudo conectar en este momento');
     }
 });
 
-        //cambiar todos los .then por async y await, usar try catch, mejorar los mensajes para saber que está pasando exactamente conforme a solicitudes del usuario, buscar como poner los mensajes para programador de consola

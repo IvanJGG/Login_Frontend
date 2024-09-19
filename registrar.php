@@ -25,6 +25,7 @@
         <input type="password" id="confirmPassword" name="confirmPassword" required><br>
 
         <input type="button" value="Guardar" id="guardarButtonRegister">
+        
 
     </form>
 
