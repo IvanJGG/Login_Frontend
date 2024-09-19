@@ -4,6 +4,7 @@ session_start();
 // Verificar si la sesión está activa
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
+    $fullname = $_SESSION['fullname'];
 } else {
     // Si no hay sesión activa, redirigir al login
     header('Location: index.php');
@@ -21,7 +22,7 @@ if (isset($_SESSION['username'])) {
 </head>
 <body>
     <h1>Bienvenido <?php echo htmlspecialchars($fullname); ?></h1>
-    <h2>tu usuario con el que ingresaste es: <?php echo htmlspecialchars($username); ?></h2>
+    <h2>Tu usario es: <?php echo htmlspecialchars($username); ?></h2>
     <form action="cerrarsesion.php" method="post">
         <input type="submit" value="Cerrar Sesión" name="logout">
     </form>
