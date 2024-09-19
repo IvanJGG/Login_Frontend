@@ -1,3 +1,13 @@
+<?php
+session_start();
+// Verificar si la sesión está activa
+if (isset($_SESSION['username'])) {
+    // Si hay sesión activa, redirigir a bienvenida
+    header('Location: bienvenido.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
